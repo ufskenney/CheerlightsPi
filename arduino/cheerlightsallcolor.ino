@@ -98,12 +98,26 @@ void loop() {
         analogWrite( GREEN, 90 );
         analogWrite( BLUE, 255 );
     }
-    else if (String(stringIn) == "white" || String(stringIn) == "warmwhite")
+    else if (String(stringIn) == "oldlace" || String(stringIn) == "warmwhite")
+    {
+      Serial.println ("oldlace");
+        analogWrite ( RED, 2);
+        analogWrite ( GREEN, 10 );
+        analogWrite ( BLUE, 25 );
+    }
+    else if (String(stringIn) == "white") 
     {  
     	Serial.println("white");
         analogWrite( RED, 0 );
         analogWrite( GREEN, 0 );
         analogWrite( BLUE, 0 );
+    }
+    else if (String(stringIn) == "pink")
+    {
+        Serial.println("pink");
+        analogWrite ( RED, 0 );
+        analogWrite ( GREEN, 63 );
+        analogWrite ( BLUE, 52 ); 
     }
     else if (String(stringIn) == "black" || String(stringIn) == "off")
     {
